@@ -54,6 +54,7 @@ body{
 }
 .nav-menu-btns{
 	margin-top: 20px;
+	margin-left: 30%;
 }
 
 marquee {
@@ -264,6 +265,113 @@ ol.list-group-numbered > li:last-child {
 }
 .bl-available >span{
 	color: black;
+
+}
+
+
+@media only screen and (max-width: 768px) {
+.btn-center-1{
+	width: 100% !important;
+	margin-left: 0px;
+	margin-top: 5px;
+}
+.btn-center{
+	width: 100% !important;
+	margin-left: 0px;
+	margin-top: 5px;
+}
+.nav-menu-btns{
+	
+	margin-left: 4%;
+
+}
+.clock p{
+	font-weight: 200;
+	margin-left: 0px;
+
+}
+.clock{
+	width: 90px;
+}
+.btn-nav-1{
+    padding: 0.175rem 0.15rem;
+   
+}
+.btn-nav{
+    padding: 0.175rem 0.15rem;
+    width: 120px;
+   
+}
+.btn-nav-1{
+    padding:;
+    width: 80px;
+   
+}
+.top-up-bar
+{
+	width: 100%;
+
+}
+.top-up-form{
+	width: 100%;
+
+}
+.balance-aside{
+	margin-left: 0px !important;
+}
+
+
+}
+@media (max-width: 1199px){
+	.btn-center-1{
+	width: 100% !important;
+	margin-left: 0px;
+	margin-top: 5px;
+}
+.btn-center{
+	width: 100% !important;
+	margin-left: 0px;
+	margin-top: 5px;
+}
+.nav-menu-btns{
+	
+	margin-left: 4%;
+
+}
+.clock p{
+	font-weight: 200;
+	margin-left: 0px;
+
+}
+.clock{
+	width: 90px;
+}
+.btn-nav-1{
+    padding: 0.175rem 0.15rem;
+   
+}
+.btn-nav{
+    padding: 0.175rem 0.15rem;
+    width: 120px;
+   
+}
+.btn-nav-1{
+    padding:;
+    width: 80px;
+   
+}
+.top-up-bar
+{
+	width: 100%;
+
+}
+.top-up-form{
+	width: 100%;
+
+}
+.balance-aside{
+	margin-left: 0px !important;
+}
 
 }
 
