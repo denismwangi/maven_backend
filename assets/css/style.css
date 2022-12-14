@@ -145,7 +145,7 @@ ul.bordered-list > li:last-child {
 .side-panel1{
 	border:1px #1DA1F2 solid;
 	border-radius: 10px;
-	
+
 }
 .side-header{
 	background-color:#1DA1F2;
@@ -162,6 +162,10 @@ ul.bordered-list > li:last-child {
     background-color: #fff;
     margin-left: 3px;
    /* border: 1px solid rgba(0,0,0,.125);*/
+}
+.menu-content a{
+	color: #fff;
+	text-decoration: none;
 }
 
 hr {
@@ -199,6 +203,69 @@ ol.list-group-numbered > li:last-child {
 	color: #E06F76;
 }
 
+.top-up-bar{
+	background-color: #D1F6EC;
+	height: 250px;
+	border-radius: 4px;
+	width: 250px;
+}
+.top-up-form{
+	width: 240px;
+	align-items: center;
+	padding: 20px;
+	padding-left: 30px;
+
+}
+.load-money{
+	font-weight: 600;
+	color: #848484;
+}
+.pay-p{
+	font-weight: 500;
+	color: #848484;
+	margin-left: 7px;
+
+}
+ input[type=radio] {
+  height: 20px;
+  width: 20px;
+  vertical-align: middle;
+}
+.load-btn-sbm{
+	color: #fff;
+	text-align: center;
+	font-weight: 700;
+	height: 35px;
+	width:130px;
+	background-color:
+
+}
+.bal-h5{
+	font-weight: 700;
+	color: #304965;
+}
+.bal-content{
+	display: flex;
+}
+
+.vl {
+  border-left: 2px solid green;
+  height: 15px;
+  margin-top: 7px;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+.balance-aside{
+	margin-left: 50px;
+}
+.bl-available{
+	color: #848484;
+
+}
+.bl-available >span{
+	color: black;
+
+}
 
 
 
