@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+body {font-family: Arial;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  resize: vertical;
+}
+input[type=number]{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #3C00CE;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  float: right;
+  width: 100%;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+form{
+   border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+/*.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+
+}
+*/
+.col-25 {
+  float: left;
+  width: 14%;
+  margin-top: 6px;
+}
+.add1{
+  color: #fff;
+}
+.minus1{
+  color: #fff;
+}
+
+.col-75 {
+  float: left;
+  width: 20%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 4px 6px;
+  transition: 0.3s;
+  font-size: 7px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, .quantity, .nav-tabs, .quantity, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+</style>
+</head>
+<body>
+
+
+<style type="text/css">
+  
+  .quantity{
+   display:flex;
+   width:490px;
+}
+
+/* it will support chrome and firefox */
+.quantity input[type=number]::-webkit-inner-spin-button,
+.quantity input[type=number]::-webkit-outer-spin-button{
+   -webkit-appearance:none;
+}
+
+.quantity input,.quantity button{
+   width:50px;
+   padding:.5em;
+   font-size:1.2rem;
+   text-align:center;
+   font-weight:900;
+   background:white;
+   border:1px solid #aaa;
+}
+
+.quantity input{
+   border-left:none;
+   border-right:none;
+   width: 190px;
+}
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+  .tabs-wrapper {
+   box-shadow: 2px 1px 20px #ddd;
+   padding: 1rem;
+   border-radius: 0.5rem;
+   height: 900px;
+   max-width: 1500px;
+}
+ ul {
+   list-style-type: none;
+   padding-left: 0;
+}
+ .nav-tabs {
+   display: flex;
+}
+ .nav-tabs li {
+   border: 0px solid #ddd;
+}
+ .tab {
+   padding: 0.5rem 0.9rem;
+   cursor: pointer;
+   border-radius: 0px;
+   margin-right: 0.01rem;
+   transition: all 0.3s ease 0s;
+}
+ .tab.is-active {
+   background-color: #45a049;
+   color: #fff;
+}
+ .tab-panel {
+   display: none;
+}
+ .tab-panel p {
+   line-height: 1.6;
+}
+ .tab-panel.is-active {
+   display: block;
+}
+</style>
+
+<script type="text/javascript">
+function increment() {
+      document.getElementById('pages').stepUp();
+   }
+   function decrement() {
+      document.getElementById('pages').stepDown();
+   }
+
+   //Calculate Tip
+ function sum() {
+  var type = document.getElementById("type").value;
+  var level = document.getElementById("level").value;
+  var deadline = document.getElementById("deadline").value;
+  var pages = document.getElementById("pages").value;
+
+  //validate input
+  // if (type === "" || level == "") {
+  //   alert("Please enter pages");
+  //   return;
+  // }
+  //Check to see if this input is empty or less than or equal to 1
+  if (pages === 0 || pages <= 1) {
+    pages = 1;
+    // document.getElementById("each").style.display = "none";
+  } else {
+    // document.getElementById("each").style.display = "block";
+  }
+
+  //Calculate tip
+  var total = level * deadline * pages;
+  //round to two decimal places
+  total = Math.round(total * 100) / 100;
+  //next line allows us to always have two digits after decimal point
+  total = total.toFixed(2);
+  //Display the tip
+  // document.getElementById("totalTip").style.display = "block";
+console.log(total);
+document.getElementById("tip").innerHTML = total;
+  //result.value = total;
+
+}
+
+//Hide the tip amount on load
+// document.getElementById("tip").style.display = "none";
+
+
+//click to call function
+document.getElementById("calculate").onclick = function() {
+//  calculateTip();
+
+};
+
+// function openCity(evt, cityName) {
+//   var i, tabcontent, tablinks;
+//   tabcontent = document.getElementsByClassName("tabcontent");
+//   for (i = 0; i < tabcontent.length; i++) {
+//     tabcontent[i].style.display = "none";
+//   }
+//   tablinks = document.getElementsByClassName("tablinks");
+//   for (i = 0; i < tablinks.length; i++) {
+//     tablinks[i].className = tablinks[i].className.replace(" active", "");
+//   }
+//   document.getElementById(cityName).style.display = "block";
+//   evt.currentTarget.className += " active";
+// }
+
+</script>
+
+
+
+
+<div class="tabs-wrapper" style=background:#fff;>
+  <div class="row">
+   <div class="col-25">
+     <label for="service" style="margin-top: 15px;">Select Currency:</label>
+   </div>
+    <div class="col-75">
+  <ul class="nav-tabs">
+    <li class="nav-item tab is-active" data-role="tab" data-target="#tabs-dollar">USD
+    </li>
+
+    <li class="nav-item tab" data-role="tab" data-target="#tabs-euro">EUR
+    </li>
+
+    <li class="nav-item tab" data-role="tab" data-target="#tabs-gbp">GBP
+    </li>
+    <li class="nav-item tab" data-role="tab" data-target="#tabs-aud">AUD
+    </li>
+    <li class="nav-item tab" data-role="tab" data-target="#tabs-cad">CAD
+    </li>
+  </ul>
+</div>
+</div>
+
+    
+   <div class="row">
+      <div class="col-25">
+         <div class="tab-content">
+    <div class="tab-panel is-active" id="tabs-dollar">
+      <label for="pages">Urgency:<br>Price per page $24.99</label>
+    </div>
+    <div class="tab-panel" id="tabs-euro">
+      <label for="pages">Urgency:<br>Price per page €12.89</label>
+    </div>
+    <div class="tab-panel" id="tabs-gbp">
+       <label for="pages">Urgency:<br>Price per page £10.90</label>
+    </div>
+    <div class="tab-panel" id="tabs-aud">
+       <label for="pages">Urgency:<br>Price per page $18.79</label>
+    </div>
+    <div class="tab-panel" id="tabs-cad">
+       <label for="pages">Urgency:<br>Price per page $16.83</label>
+    </div>
+  </div>
+    </div>
+      <div class="col-75">
+    <select id="deadline" onchange="sum()"> 
+               <option value="10">14 Days</option>
+               <option value="11"> 7 Days</option>
+               <option value="12">5 Days</option>
+               <option value="13">3 Days</option>
+               <option value="14">48 hrs</option>
+               <option value="15">24 hours</option>
+               <option value="16">8 hours</option>
+              <option value="17">4 hours</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+      <div class="col-25">
+        <label for="deadline">Total price:</label>
+         <span style="color: #f5800a; font-weight: 700;">$</span>
+        <span id="tip" style="color: #f5800a; font-weight: 700;">0.00</span>
+      </div>
+      <div class="col-75">
+       <input type="submit" value="Submit">
+      </div>
+    </div>
+
+</div>
+
+<script type="text/javascript">
+  const tabs = document.querySelectorAll('[data-role="tab"]'),
+  tabContents = document.querySelectorAll(".tab-panel");
+
+tabs.forEach((tab) => {
+  tab.addEventListener("click", () => {
+    const target = document.querySelector(tab.dataset.target);
+
+    tabContents.forEach((tc) => {
+      tc.classList.remove("is-active");
+    });
+    target.classList.add("is-active");
+
+    tabs.forEach((t) => {
+      t.classList.remove("is-active");
+    });
+    tab.classList.add("is-active");
+  });
+});
+
+</script>

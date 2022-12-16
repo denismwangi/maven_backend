@@ -7,6 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<link rel="stylesheet" type="text/css" href="assets/font-awesome/css/font-awesome.min.css">
+	<script type="text/javascript" src="assets/js/jquery.js"></script>
 </head>
 <body>
 
@@ -42,13 +43,21 @@
 				
 				  
 				  	<div class="nav-menu-btns">
+				  		
 
-				      <button type="button" class="btn btn-primary btn-nav-1">
-				      	<i class="fa fa-life-ring"></i>
-				      	User
-				      	<i class="fa fa-caret-down" aria-hidden="true"></i>
+						      <button type="button" class="btn btn-primary btn-nav-1 dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						      	<i class="fa fa-life-ring"></i>
+						      	Help
+						      	<!-- <i class="fa fa-caret-down" aria-hidden="true"></i> -->
 
-				      </button>
+						      </button>
+						      <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+							    <a class="dropdown-item" href="#">Action</a>
+							    <a class="dropdown-item" href="#">Another action</a>
+							    <a class="dropdown-item" href="#">Something else here</a>
+							  </div>
+
+				     
 
 				       <button type="button" class="btn btn-primary btn-nav">
 				       		<i class="fa fa-user" aria-hidden="true"></i>
@@ -74,25 +83,36 @@
 		 	<div class="side-menu-item">
 		 		<li class="menu-content">
 	   		<i class="fa fa-list" aria-hidden="true"></i>
-                My Active Orders
+	   		<a href="active-orders.html" class="title acolor">My Active Orders</a>
+                
 		 		</li>
 		 </div>
 		 	<div class="side-menu-item">
 	   		<li class="menu-content">
 	   		<i class="fa fa-list" aria-hidden="true"></i>
-		 			Assigned/Completed Orders
+	   		<a href="completed.html" class="title acolor">Assigned/Completed Orders</a>
+		 			
 		 		</li>
 		 </div>
 		 	<div class="side-menu-item">
 	   		<li class="menu-content">
 	   		<i class="fa fa-list" aria-hidden="true"></i>
+	   		<a href="approved.html" class="title acolor">My Active Orders</a>
 		 			Approved Orders
+		 		</li>
+		 </div>
+		 <div class="side-menu-item">
+	   		<li class="menu-content">
+	   		<i class="fa fa-list" aria-hidden="true"></i>
+	   		<a href="revision.html" class="title acolor">My Active Orders</a>
+		 			Orders in Revision
 		 		</li>
 		 </div>
 		 	<div class="side-menu-item">
 	   		<li class="menu-content">
 	   		<i class="fa fa-envelope" aria-hidden="true"></i>
-	   		<span class="title acolor">Orders in Revision <span class="badge badge-pill badge-danger">10</span></span>  
+	   		
+	   		<a href="messages.html" class="title acolor">Messages <span class="badge badge-pill badge-danger">10</span></a>  
                       
 		 		</li>
 		 </div>
@@ -210,4 +230,5 @@
 </div>
 
 </body>
+<script type="text/javascript" src="assets/bootstrap/bootstrap.min.js"></script>
 </html>

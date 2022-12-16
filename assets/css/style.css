@@ -267,6 +267,45 @@ ol.list-group-numbered > li:last-child {
 	color: black;
 
 }
+.card-h{
+	color: #fff;
+	 background-color: #367fd3;
+}
+.btn-warning{
+	color: #fff !important;
+}
+.paypal-tutor{
+
+	width:500px;
+
+}
+.paypal-tutor-p{
+	text-align: center;
+
+}
+.btn-primary{
+	background-color: #367fd3 !important;
+}
+.tip-h5{
+	color: #09E7FB;
+	font-weight: 700;
+
+}
+.n-h5{
+	font-weight: 700;
+
+}
+.p-grade{
+	font-weight: 700;
+
+}
+.td-data{
+	font-weight: 700;
+
+}
+.td-h4{
+	font-weight: 700;
+}
 
 
 @media only screen and (max-width: 768px) {
