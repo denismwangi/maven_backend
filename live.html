@@ -7,24 +7,31 @@
 	<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<link rel="stylesheet" type="text/css" href="assets/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/ckeditor/plugins/codesnippet/lib/highlight/styles/dark.css">
+	 <script src="assets/ckeditor/ckeditor.js"></script>
+    <script src="assets/ckeditor/plugins/codesnippet/lib/highlight/highlight.pack.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
 
-	
 <div class="container-fluid">
 	<div class="row nav-menu ">
 	   <div class="col-12 col-sm-3 ">
 	   	<div class="logo-img">
-	   			<img src="assets/images/logo.png" width="50%" height="50">
+	   		<h2 class="logo-hide" style="color: #367fd3; font-weight: 800; font-size: 20px; text-align: center; margin-bottom: 25px;">HOMEWORKMAVEN</h2>
+	   			<img src="assets/images/logo_back.png" class="logo-desktop" width="50%" height="50">
 	   	</div>
 	  
 		</div>
 		 <div class="col-12 col-sm-3">
 		 	<div class="support-content">
 		 		<p class="support-left">
-		 			24/7 - support
+		 			Quick Update
 		 		</p>
-		 		<p><marquee behavior="scroll" scrollamount="7" direction="left" 
+		 		<p class="mar-text"><marquee behavior="scroll" scrollamount="7" direction="left" 
 				    onmouseover="this.stop();" onmouseout="this.start();">
 				   From the first day to finals, get homework help and writing support - tailored to your courses. Thousands of students use Homeworkmaven.com to master their most challenging tasks. 
 				    </marquee></p>
@@ -35,71 +42,131 @@
 				</div>
 				  <div class="col-12 col-sm-6" style="display: flex;">
 				  <div class="clock">
-				  	<p>December 24, 2022
-				  	 at 2:40 PM</p>
+				  	<p>
+				  	  2:40 PM EST</p>
 				  </div>
+				  <style type="text/css">
+				  	#btdd{
+				  		display: flex!important; margin-top: 7px; margin-left: 30% !important;
+
+				  	}
+				  	@media (max-width: 1199px){
+				  			#btdd{
+				  		 margin-left: 10% !important;
+
+				  	}
+				  	.support-content{
+				  		margin-top: -22px !important;
+				  		height: 70px!important;
+				  	}
+
+
+				  	}
+				  	@media only screen and (max-width: 768px) {
+				  		#btdd{
+				  		 margin-left: 10% !important;
+
+				  	}
+				  	.support-content{
+				  		margin-top: -22px !important;
+				  		height: 70px!important;
+				  	}
+				  	}
+				  </style>
 				
 				  
-				  	<div class="nav-menu-btns">
+				  	<div class="nav-menu-btns bts" id="btdd" style="">
 
-				      <button type="button" class="btn btn-primary btn-nav-1">
-				      	<i class="fa fa-life-ring"></i>
-				      	User
-				      	<i class="fa fa-caret-down" aria-hidden="true"></i>
+				      <div>
+					      <button type="button" class="btn btn-primary dropdown-toggle btn-nav-1" data-toggle="dropdown">
 
-				      </button>
+					      	<i class="fa fa-life-ring"></i>
+					      	Help
+					      
 
-				       <button type="button" class="btn btn-primary btn-nav">
-				       		<i class="fa fa-user" aria-hidden="true"></i>
-				      	mark Diana
-				      	<i class="fa fa-caret-down" aria-hidden="true"></i>
+					      </button>
+					  
 
-				      </button>
+					      <div class="dropdown-menu">
+						    <a class="dropdown-item" href="messages.html"><i class="fa fa-comments" aria-hidden="true"></i>
+
+						Send Message</a>
+						    <a class="dropdown-item" href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i>
+
+					Chat in real-time</a>
+						   
+						  </div>
+					</div>
+					<div style="margin-left: 5px;">
+				       		<button type="button" class="btn btn-primary dropdown-toggle btn-nav" data-toggle="dropdown">
+				       			<i class="fa fa-user" aria-hidden="true"></i>
+							   Ann J
+				      	
+
+					      </button>
+
+
+					      <div class="dropdown-menu">
+							    <a class="dropdown-item" href="profile.html"><i class="fa fa-home" aria-hidden="true"></i>
+							Ann J
+							<br>
+							<span style="margin-left: 20px;">View Profile</span>
+
+						</a>
+						 <a class="dropdown-item" href="active-orders.html"><i class="fa fa-file-text-o" aria-hidden="true"></i>
+
+							My Orders</a>
+							 <a class="dropdown-item" href="#"><i class="fa fa-percent" aria-hidden="true"></i>
+
+							Discounts</a>
+							    <a class="dropdown-item" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i>
+							Logout</a>
+							   
+							  </div>
+					</div>
 				  </div>
 		</div>
 </div>
 </div>
-
-
 <div class="main-content">
 <div class="row">
 	   <div class="col-12 col-md-3 side-menu">
 	   	
-	   	<div class="side-menu-item">
-	   		<li class="menu-content">
+	   	<div class="side-menu-item mobi-dash">
+	   		<li class="menu-content mobi-content">
 	   		<i class="fa fa-tachometer" aria-hidden="true"></i>
 		 		<a href="index.html" class="title acolor">Dashboard</a>
 		 		</li>
 		 </div>
-		 	<div class="side-menu-item">
+		 	<div class="side-menu-item mobi-hide">
 		 		<li class="menu-content">
 	   		<i class="fa fa-list" aria-hidden="true"></i>
 	   		<a href="active-orders.html" class="title acolor">My Active Orders</a>
                 
 		 		</li>
 		 </div>
-		 	<div class="side-menu-item">
+		 	<div class="side-menu-item mobi-hide">
 	   		<li class="menu-content">
 	   		<i class="fa fa-list" aria-hidden="true"></i>
 	   		<a href="completed.html" class="title acolor">Assigned/Completed Orders</a>
 		 			
 		 		</li>
 		 </div>
-		 	<div class="side-menu-item">
+		 	<div class="side-menu-item mobi-hide">
 	   		<li class="menu-content">
 	   		<i class="fa fa-list" aria-hidden="true"></i>
-	   		<a href="approved.html" class="title acolor">My Active Orders</a>
-		 			Approved Orders
+	   		<a href="approved.html" class="title acolor">Approved Orders</a>
+		 			
 		 		</li>
 		 </div>
-		 <div class="side-menu-item">
+		 <div class="side-menu-item mobi-hide">
 	   		<li class="menu-content">
 	   		<i class="fa fa-list" aria-hidden="true"></i>
-	   		<a href="revision.html" class="title acolor">My Active Orders</a>
-		 			Orders in Revision
+	   		<a href="revision.html" class="title acolor">Orders in Revision</a>
+		 			
 		 		</li>
 		 </div>
-		 	<div class="side-menu-item">
+		 	<div class="side-menu-item mobi-hide">
 	   		<li class="menu-content">
 	   		<i class="fa fa-envelope" aria-hidden="true"></i>
 	   		
@@ -107,25 +174,28 @@
                       
 		 		</li>
 		 </div>
-		 <div class="side-menu-item">
+		 <div class="side-menu-item mobi-hide">
 	   		<li class="menu-content">
 	   		<i class="fa fa-check-square-o" aria-hidden="true"></i>
+	   		<a href="class.html" class="title acolor">Online Class Help</a>
 
-	   		<span class="title acolor">Online Class Help</span>  
+	   		
                       
 		 		</li>
 		 </div>
-		 <div class="side-menu-item">
+		 <div class="side-menu-item mobi-hide">
 	   		<li class="menu-content">
 	   		<i class="fa fa-tags" aria-hidden="true"></i>
+	   		<a href="rec.html" class="title acolor">Our Recommendations  </a>
 
-	   		<span class="title acolor">Our Recommendations </span>  
+	   		
                       
 		 		</li>
 		 </div>
-		 <div class="side-menu-item">
+		 <div class="side-menu-item mobi-hide">
 	   		<li class="menu-content">
 	   		<i class="fa fa-credit-card-alt" aria-hidden="true"></i>
+	   		
 
 	   		<a href="wallet.html" class="title acolor">My Wallet</a> 
                       
